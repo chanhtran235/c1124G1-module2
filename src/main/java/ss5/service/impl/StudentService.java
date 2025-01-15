@@ -1,6 +1,9 @@
-package ss5;
+package ss5.service.impl;
 
-public class StudentManager {
+import ss5.model.Student;
+import ss5.service.IStudentService;
+
+public class StudentService implements IStudentService {
     private static Student[] students = new Student[100];
     static {
         students[0] = new Student(1,"chánh1");
@@ -8,14 +11,11 @@ public class StudentManager {
         students[2] = new Student(3,"chánh3");
     }
 
-
-    // chưa các method CRUD : Create, Read, Update, Delete
-    // lấy danh sách ra
-
+    @Override
     public  Student[] getAll() {
         return students;
     }
-    // thêm mới
+    @Override
     public void add(Student student){
         for (int i = 0; i <students.length ; i++) {
             if (students[i]==null){

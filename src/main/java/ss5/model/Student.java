@@ -1,4 +1,4 @@
-package ss5;
+package ss5.model;
 
 public class Student {
     private int id;
